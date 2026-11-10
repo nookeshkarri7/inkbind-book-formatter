@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inkbind: offline book formatter for KDP paperbacks and EPUB</title>
+<meta name="description" content="About Inkbind, the offline book formatter for Windows and Android: Word manuscript in, KDP-ready print PDF and EPUB out. No account, no subscription.">
+<meta property="og:title" content="Inkbind: offline book formatter">
+<meta property="og:description" content="Word manuscript in, KDP-ready print PDF and EPUB out. Windows and Android.">
+<meta property="og:image" content="https://nookeshkarri7.github.io/inkbind-book-formatter/assets/feature-graphic.png">
+<meta name="theme-color" content="#234A3C">
+<link rel="icon" href="assets/icon.png">
+<style>
+@font-face { font-family: "Instrument Sans"; src: url(assets/InstrumentSans-Regular.ttf); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Instrument Sans"; src: url(assets/InstrumentSans-SemiBold.ttf); font-weight: 600; font-display: swap; }
+@font-face { font-family: Literata; src: url(assets/Literata-Bold.ttf); font-weight: 700; font-display: swap; }
+:root { --bg: #F5F0E6; --surface: #FBF8F2; --line: #DDD3C1; --ink: #1F2A25; --muted: #5C6760; --primary: #234A3C; --on: #FBF8F2; --gilt: #B07D1A; color-scheme: light dark; }
+@media (prefers-color-scheme: dark) { :root { --bg: #131613; --surface: #1C201C; --line: #2F352F; --ink: #ECE6DA; --muted: #A2A99F; --primary: #86C2A6; --on: #102019; --gilt: #E2B04F; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 "Instrument Sans", system-ui, sans-serif; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+h1, h2 { font-family: Literata, Georgia, serif; color: var(--primary); line-height: 1.1; }
+h1 { font-size: clamp(34px, 5vw, 52px); margin: 40px 0 12px; }
+h2 { font-size: 28px; margin: 48px 0 16px; }
+p.lead { font-size: 19px; color: var(--muted); max-width: 640px; }
+a { color: var(--primary); }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+.btn { display: inline-flex; align-items: center; min-height: 50px; padding: 0 22px; border-radius: 10px; font-weight: 600; text-decoration: none; }
+.btn.fill { background: var(--primary); color: var(--on); }
+.btn.line { border: 1.5px solid var(--ink); color: var(--ink); }
+img { max-width: 100%; height: auto; display: block; border-radius: 12px; }
+.shot { border: 1px solid var(--line); margin: 0; }
+.phones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+.video { position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: #234A3C; }
+.video button { all: unset; cursor: pointer; position: absolute; inset: 0; display: grid; place-items: center; }
+.video img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+.video .play { position: relative; width: 72px; height: 72px; border-radius: 50%; background: #234A3C; border: 3px solid #E2B04F; display: grid; place-items: center; }
+.video .play::after { content: ""; margin-left: 6px; border-left: 20px solid #FBF8F2; border-top: 13px solid transparent; border-bottom: 13px solid transparent; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+footer a { margin-right: 16px; }
+@media (max-width: 640px) { .phones { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>Inkbind, the offline book formatter</h1>
+  <p class="lead">Inkbind turns a Word manuscript into a KDP-ready print PDF and an EPUB on your own Windows PC or Android phone. Nothing is uploaded, there is no account, and the Windows Pro upgrade is a one-time $79.</p>
+  <div class="btns">
+    <a class="btn fill" href="https://apps.microsoft.com/detail/9P317ZQH835T">Get it from Microsoft</a>
+    <a class="btn line" href="https://play.google.com/store/apps/details?id=com.inkbindapp.inkbind">Get it on Google Play</a>
+    <a class="btn line" href="https://inkbind.pages.dev/">Visit the website</a>
+  </div>
+
+  <div class="video" data-yt="sn-C4lMBiHs">
+    <img src="assets/windows-preview.webp" width="1280" height="720" alt="Inkbind on Windows: a two-page print preview of a chapter opening">
+    <button type="button" aria-label="Play the Inkbind for Windows demo"><span class="play"></span></button>
+  </div>
+
+  <h2>Why authors use it</h2>
+  <ul>
+    <li><strong>Windows, natively.</strong> No rented Mac and no browser tab that needs the internet to import or export.</li>
+    <li><strong>Pages that match the print file.</strong> Chapters open on right-hand pages, with drop caps, running heads and no widows or orphans.</li>
+    <li><strong>KDP's paperback rules built in.</strong> Trim sizes from 5 × 8 to 7 × 10 inches, bleed, and an inside margin set from the page count.</li>
+    <li><strong>An ebook from the same file.</strong> EPUB 3 with a clickable table of contents and embedded fonts.</li>
+    <li><strong>Series-ready.</strong> Templates keep every book in a series looking the same; use your own fonts on Windows Pro.</li>
+  </ul>
+
+  <h2>Before you upload</h2>
+  <figure class="shot"><img src="assets/windows-export.webp" width="1280" height="720" alt="Export dialog listing the KDP checks before export" loading="lazy"></figure>
+
+  <h2>On Android</h2>
+  <p>Free with ads: the same import, preview and export on your phone. EPUB export is always free, and one short video exports a clean print PDF.</p>
+  <div class="phones">
+    <figure class="shot"><img src="assets/android-print.webp" width="405" height="720" alt="Print preview on Android" loading="lazy"></figure>
+    <figure class="shot"><img src="assets/android-ebook.webp" width="405" height="720" alt="Ebook preview on Android" loading="lazy"></figure>
+    <figure class="shot"><img src="assets/android-export.webp" width="405" height="720" alt="Finished PDF and EPUB on Android" loading="lazy"></figure>
+  </div>
+  <p><a href="https://youtube.com/shorts/K67lYuXTjv8">Watch the Android teaser</a></p>
+</main>
+<footer class="wrap">
+  <a href="https://inkbind.pages.dev/">Website</a>
+  <a href="https://inkbind.pages.dev/privacy/">Privacy policy</a>
+  <a href="https://github.com/nookeshkarri7/inkbind-book-formatter">GitHub</a>
+  <a href="mailto:anithabheesetty@gmail.com">Support</a>
+</footer>
+<script>
+  // Click-to-load: nothing loads from YouTube until play is pressed.
+  document.querySelectorAll(".video[data-yt]").forEach(function (v) {
+    v.querySelector("button").addEventListener("click", function () {
+      var f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + v.dataset.yt + "?autoplay=1&rel=0";
+      f.title = "Inkbind video";
+      f.allow = "autoplay; encrypted-media; picture-in-picture";
+      f.allowFullscreen = true;
+      v.innerHTML = "";
+      v.appendChild(f);
+    });
+  });
+</script>
+</body>
+</html>
